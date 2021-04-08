@@ -6,7 +6,7 @@
 
         private $user = 'uuovso0zl7kt84ck';
 
-        private $pass = 'uuovso0zl7kt84ck';
+        private $pass = 'GYDWOufXJgI4fojzEMMa';
 
         private $port = '3306';
 

@@ -13,7 +13,7 @@
     
     $.ajax({
         url:"http://localhost/PHPPRESTAMO/Service/SCliente.php",
-        data:{tipo:'lista',txtbus:''},
+        data:{tipo:'B',txtbus:'1'},
         type:"Get",
         dataType:"",
         success:function(resp){

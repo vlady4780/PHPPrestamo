@@ -10,20 +10,24 @@ create table Cliente
     dni_cli char(8) not null unique
 )
 
-insert into Cliente values (null,'jose','tiznado','123456789');
+insert into Cliente values (null,'jose','tiznado','1234567');
 
 
 
 DROP PROCEDURE IF EXISTS SP_BUSDEL_CLIENTE;
 DELIMITER $$
 CREATE PROCEDURE SP_BUSDEL_CLIENTE
-(BUS VARCHAR(20), TIPO VARCHAR(3))
+(
+    BUS int, 
+    TIPO VARCHAR(8)
+    )
 BEGIN
     IF TIPO='B' THEN
-        SELECT * FROM CLIENTE WHERE COD_CLI=BUS OR NOM_CLI LIKE CONCAT('%',BUS,'%');
+        SELECT * FROM Cliente
+        WHERE COD_CLI=BUS OR NOM_CLI LIKE CONCAT('%',BUS,'%');
     ELSEIF TIPO='D' THEN
-        DELETE FROM CLIENTE WHERE COD_CLI=BUS;
+        DELETE FROM CLIENTE
+        WHERE COD_CLI=BUS;
     END IF;
-END $$
-DELIMITER $$
-CALL SP_BUSDEL_CLIENTE('','B')
+END; $$
+CALL SP_BUSDEL_CLIENTE('1','B')
