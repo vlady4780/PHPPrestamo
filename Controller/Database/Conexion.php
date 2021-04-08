@@ -2,15 +2,15 @@
 
     class Conexion{
 
-        private $local = 'localhost';
+        private $local = 'bpcqbf154ajaz6xz1taq-mysql.services.clever-cloud.com';
 
-        private $user = 'root';
+        private $user = 'uuovso0zl7kt84ck';
 
-        private $pass = '';
+        private $pass = 'uuovso0zl7kt84ck';
 
         private $port = '3306';
 
-        private $bd = 'bdprestamo';
+        private $bd = 'bpcqbf154ajaz6xz1taq';
 
         public function getcon(){
 
