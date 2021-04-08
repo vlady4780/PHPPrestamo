@@ -193,13 +193,11 @@
         $('#TbLista').html(data);
       },error: function(error){
         alert('Error 404:'+error);
-        console.log('Error 404:'+error);
       }
     });
   }
 
 </script>
-
 
 </body>
 </html>
